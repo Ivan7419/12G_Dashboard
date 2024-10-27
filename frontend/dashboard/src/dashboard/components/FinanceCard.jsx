@@ -10,23 +10,13 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', transform: 'scale(0.8)' }}
-    >
-        •
-    </Box>
-);
-
-
 
 export default function FinanceCard() {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <Card variant="outlined" sx={{ height: '100%', width: '80%' }}>
+        <Card variant="outlined" sx={{ height: '100%', width: '90%' }}>
             <CardContent>
                 <Typography variant="h6" gutterBottom sx={{ color: 'text.secondary' }}>
                     Активный баланс
