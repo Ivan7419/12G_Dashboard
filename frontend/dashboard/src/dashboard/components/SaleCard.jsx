@@ -47,7 +47,7 @@ export default function SaleCard() {
                             endIcon={<SellRoundedIcon />}
                             fullWidth={isSmallScreen}
                             sx={{ width: '90%' }}>
-                            Продать
+                            Списать
                         </Button>
                     </Box>
                 </Box>

@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import MenuContent from './MenuContent';
 import OptionsMenu from './OptionsMenu';
 import * as PropTypes from "prop-types";
+import Logo12G from "../../common/Logo12G";
 
 const drawerWidth = 240;
 
@@ -42,19 +43,10 @@ export default function SideMenu() {
     >
         <Box component="section" sx={{ display: 'flex', p: 2,
             background: `radial-gradient(circle, ${theme.palette.primaryGradientStart}, ${theme.palette.primaryGradientEnd})`,
-            width: '100%' }}>
-            <Box
-                component="img"
-                sx={{
-                    height: 50,
-                    width: 50,
-                    maxHeight: { xs: 50, md: 50 },
-                    maxWidth: { xs: 50, md: 50 },
-                    mr: 3
-                }}
-                alt="logo"
-                src={`${theme.palette.logo}`}
-            />
+            width: '100%',
+            alignItems: 'center',
+            }}>
+            <Logo12G/>
             <Typography variant="h6" component="h1" sx={{ textAlign: 'center', fontWeight: 800 }}>
                 Панель
             </Typography>

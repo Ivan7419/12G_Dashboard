@@ -78,6 +78,7 @@ export const getDesignTokens = (mode) => {
   return {
     palette: {
       mode,
+      logo: colorSchemes[mode].palette.logo,
       primary: {
         light: brand[200],
         main: brand[400],
@@ -158,9 +159,6 @@ export const getDesignTokens = (mode) => {
           selected: alpha(gray[600], 0.3),
         }),
       },
-      primaryGradientStart: '#FF5733',
-      primaryGradientEnd: '#33FF99',
-      // myBoxColor: mode === 'dark' ? '#2b2452' : 'hsl(210, 100%, 80%)',
     },
     typography: {
       fontFamily: ['"PF Centro Sans Pro", "sans-serif"'].join(','),
@@ -221,7 +219,7 @@ export const getDesignTokens = (mode) => {
 export const colorSchemes = {
   light: {
     palette: {
-      logo: './logo_dark.png',
+      logo: '/logo_dark.png',
       primaryGradientStart: 'hsl(146 45% 67%)',
       primaryGradientEnd: '#85b7d1',
       primary: {
@@ -274,7 +272,7 @@ export const colorSchemes = {
   },
   dark: {
     palette: {
-      logo: './logo_light.png',
+      logo: '/logo_light.png',
       primaryGradientStart: 'hsl(213 45% 30%)',
       primaryGradientEnd: '#2e2259',
       primary: {
