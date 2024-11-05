@@ -15,6 +15,7 @@ import {
 import AppTheme from "../shared-theme/AppTheme";
 import AppNavbar from "./components/AppNavbar";
 import MainGrid from "./components/MainGrid";
+import Sales from "./components/Sales";
 
 const xThemeComponents = {
   ...chartsCustomizations,
@@ -30,7 +31,6 @@ export default function Dashboard(props) {
       <Box sx={{ display: 'flex' }}>
         <SideMenu />
         <AppNavbar />
-        {/* Main content */}
         <Box
           component="main"
           sx={(theme) => ({
@@ -51,7 +51,8 @@ export default function Dashboard(props) {
             }}
           >
             <Header />
-            <MainGrid />
+            <Sales/>
+            {/*<MainGrid />*/}
           </Stack>
         </Box>
       </Box>

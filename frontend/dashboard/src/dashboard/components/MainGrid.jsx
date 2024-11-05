@@ -48,7 +48,7 @@ export default function MainGrid() {
       <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
         Обзор
       </Typography>
-      <Grid container spacing={0} columns={12}
+      <Grid container spacing={4} columns={12}
             direction="row"
             sx={{
               justifyContent: "center",

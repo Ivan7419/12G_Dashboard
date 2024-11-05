@@ -25,8 +25,11 @@ export default function OptionsMenu() {
   };
   const handleClose = () => {
     setAnchorEl(null);
-    navigate('/');
   };
+    const handleLogOut = () => {
+        setAnchorEl(null);
+        navigate('/');
+    };
   return (
     <React.Fragment>
       <MenuButton
@@ -63,7 +66,7 @@ export default function OptionsMenu() {
         <MenuItem onClick={handleClose}>Settings</MenuItem>
         <Divider />
         <MenuItem
-          onClick={handleClose}
+          onClick={handleLogOut}
           sx={{
             [`& .${listItemIconClasses.root}`]: {
               ml: 'auto',
