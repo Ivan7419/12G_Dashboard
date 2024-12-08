@@ -1,13 +1,21 @@
 import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
-import { columns, rows } from '../internals/data/gridData';
+import {DataGrid, useGridApiRef} from '@mui/x-data-grid';
+import { columns, initialRows } from '../internals/data/gridData';
+import EditToolbar from "./EditToolbar";
+import { ruRU } from '@mui/x-data-grid/locales';
 
-export default function CustomizedDataGrid() {
+export default function CustomizedDataGrid(props) {
+  const [selectedRowId, setSelectedRowId] = React.useState(null);
+  const apiRef = useGridApiRef();
+  const handleSelectionChange = (newSelection) => {
+    setSelectedRowId(newSelection[0]);
+  };
+
   return (
     <DataGrid
-      autoHeight
-      checkboxSelection
-      rows={rows}
+      localeText={ruRU.components.MuiDataGrid.defaultProps.localeText}
+      apiRef={apiRef}
+      rows={initialRows}
       columns={columns}
       getRowClassName={(params) =>
         params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd'
@@ -18,7 +26,15 @@ export default function CustomizedDataGrid() {
       pageSizeOptions={[10, 20, 50]}
       disableColumnResize
       density="compact"
+      slots={{
+        toolbar: EditToolbar,
+      }}
       slotProps={{
+        toolbar: {
+          addRecordHandler: props.addRecordHandler,
+          apiRef: apiRef,
+          selectedRowId,
+        },
         filterPanel: {
           filterFormProps: {
             logicOperatorInputProps: {
@@ -44,6 +60,8 @@ export default function CustomizedDataGrid() {
           },
         },
       }}
+      onRowSelectionModelChange={handleSelectionChange}
     />
   );
 }
+

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend/dashboard
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Maps container's port 3000 to host's port 3000
+    volumes:
+      - .:/app # For live updates in development
+      - /app/node_modules # Prevents overwriting node_modules
+    environment:
+        - NODE_ENV=development

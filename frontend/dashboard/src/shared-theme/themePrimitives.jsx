@@ -136,6 +136,9 @@ export const getDesignTokens = (mode) => {
       grey: {
         ...gray,
       },
+      autocomplete: {
+        backgroundColor: 'hsl(0, 0%, 99%)',
+      },
       divider: mode === 'dark' ? alpha(gray[700], 0.6) : alpha(gray[300], 0.4),
       background: {
         default: 'hsl(0, 0%, 99%)',

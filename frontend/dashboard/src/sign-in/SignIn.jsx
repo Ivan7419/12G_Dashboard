@@ -38,10 +38,13 @@ const Card = styled(MuiCard)(({ theme }) => ({
   }),
 }));
 
-const SignInContainer = styled(Stack)(({ theme }) => ({
-  height: 'calc((1 - var(--template-frame-height, 0)) * 100dvh)',
-  minHeight: '100%',
+const SignInContainer = styled(Box)(({ theme }) => ({
+  height: '100vh',
   padding: theme.spacing(2),
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  overflowY: 'auto',
   [theme.breakpoints.up('sm')]: {
     padding: theme.spacing(4),
   },
@@ -121,17 +124,13 @@ export default function SignIn(props) {
   return (
       <AppTheme {...props}>
         <CssBaseline enableColorScheme />
-        <SignInContainer direction="column" justifyContent="space-between">
+        <SignInContainer>
           <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />
           <Card variant="outlined">
-            <Box sx={{ display: 'flex', justifyContent: 'center'}}>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               <Logo12G height={60} width={60} />
             </Box>
-            <Typography
-                component="h1"
-                variant="h4"
-                sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)' }}
-            >
+            <Typography component="h1" variant="h4" sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)' }}>
               Войти
             </Typography>
             <Box
@@ -191,27 +190,15 @@ export default function SignIn(props) {
                     color={passwordError ? 'error' : 'primary'}
                 />
               </FormControl>
-              <FormControlLabel
-                  control={<Checkbox value="remember" color="primary" />}
-                  label="Запомнить меня"
-              />
+              <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Запомнить меня" />
               <ForgotPassword open={open} handleClose={handleClose} />
-              <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  onClick={validateInputs}
-              >
+              <Button type="submit" fullWidth variant="contained" onClick={validateInputs}>
                 Войти
               </Button>
               <Typography sx={{ textAlign: 'center' }}>
                 Ещё нет аккаунта?{' '}
                 <span>
-                <Link
-                    href="/signup"
-                    variant="body2"
-                    sx={{ alignSelf: 'center' }}
-                >
+                <Link href="/signup" variant="body2" sx={{ alignSelf: 'center' }}>
                   Зарегистрироваться
                 </Link>
               </span>
