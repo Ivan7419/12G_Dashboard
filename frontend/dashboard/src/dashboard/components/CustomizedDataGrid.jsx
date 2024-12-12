@@ -5,6 +5,7 @@ import EditToolbar from "./EditToolbar";
 import { ruRU } from '@mui/x-data-grid/locales';
 
 export default function CustomizedDataGrid(props) {
+  const [rows, setRows] = React.useState(initialRows);
   const [selectedRowId, setSelectedRowId] = React.useState(null);
   const apiRef = useGridApiRef();
   const handleSelectionChange = (newSelection) => {
@@ -15,7 +16,7 @@ export default function CustomizedDataGrid(props) {
     <DataGrid
       localeText={ruRU.components.MuiDataGrid.defaultProps.localeText}
       apiRef={apiRef}
-      rows={initialRows}
+      rows={rows}
       columns={columns}
       getRowClassName={(params) =>
         params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd'
@@ -24,14 +25,14 @@ export default function CustomizedDataGrid(props) {
         pagination: { paginationModel: { pageSize: 20 } },
       }}
       pageSizeOptions={[10, 20, 50]}
-      disableColumnResize
+      disableColumnResize={false}
       density="compact"
       slots={{
         toolbar: EditToolbar,
       }}
       slotProps={{
         toolbar: {
-          addRecordHandler: props.addRecordHandler,
+          setRows,
           apiRef: apiRef,
           selectedRowId,
         },

@@ -111,25 +111,23 @@ export const columns = [
   {
     field: 'item',
     headerName: 'Покупка',
-    flex: 0.5,
-    minWidth: 300,
+    flex: 1,
   },
   {
     field: 'fullname',
     headerName: 'Покупатель',
-    flex: 1,
-    width: 300,
+    flex: 0.8,
   },
   {
     field: 'phone',
     headerName: 'Телефон',
-    flex: 0.8,
+    flex: 0.6,
     width: 80,
   },
   {
     field: 'address',
     headerName: 'Адрес',
-    flex: 1,
+    flex: 0.8,
     width: 300,
     renderCell: renderCellExpand,
   },
@@ -139,7 +137,7 @@ export const columns = [
     headerAlign: 'right',
     align: 'right',
     flex: 0.6,
-    minWidth: 50,
+    width: 50,
     valueFormatter: (value) => {
       return `${value.toLocaleString()} грн.`;
     },
@@ -147,7 +145,7 @@ export const columns = [
   {
     field: 'tth',
     headerName: 'TTH',
-    flex: 1,
+    flex: 0.7,
     width: 100,
     headerAlign: 'right',
     align: 'right',
@@ -158,7 +156,7 @@ export const columns = [
     renderCell: renderStatus,
     headerAlign: 'right',
     align: 'right',
-    flex: 0.8,
+    flex: 0.6,
     width: 100,
   },
 ];

@@ -17,6 +17,7 @@ import AppNavbar from "./components/AppNavbar";
 import MainGrid from "./components/MainGrid";
 import Sales from "./components/Sales";
 import {Route, Routes} from "react-router-dom";
+import Stock from "./components/Stock";
 
 const xThemeComponents = {
     ...chartsCustomizations,
@@ -56,7 +57,7 @@ export default function Dashboard(props) {
                                 <Route path="/" element={<MainGrid />} />
                                 <Route path="sales" element={<Sales />} />
                                 <Route path="analytics" element={<h1>Analytics</h1>}/>
-                                <Route path="stock" element={<h1>Stock</h1>} />
+                                <Route path="stock" element={<Stock />} />
                             </Routes>
                         </Stack>
                     </Box>

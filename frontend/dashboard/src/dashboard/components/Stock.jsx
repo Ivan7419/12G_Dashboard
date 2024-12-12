@@ -2,6 +2,7 @@ import * as React from 'react';
 import CustomizedDataGrid from "./CustomizedDataGrid";
 import Grid from "@mui/material/Grid2";
 import StatCard from "./StatCard";
+import Box from "@mui/material/Box";
 
 const data = [
     {
@@ -36,30 +37,40 @@ const data = [
     },
 ];
 
-export default function Sales() {
+export default function Stock() {
 
     return (
-        <Grid container spacing={4} columns={12}
-              direction="row"
-              sx={{
-                  justifyContent: "center",
-                  alignItems: "flex-start",
-              }}>
-            <Grid
-                size={{xs: 12, sm: 6, lg: 12}}
-                container
-                spacing={2}
-                columns={12}
-                sx={{mb: (theme) => theme.spacing(1)}}
-            >
-                {data.map((card, index) => (
-                    <Grid key={index} size={{xs: 12, sm: 6, lg: 4}}>
-                        <StatCard {...card} />
-                    </Grid>
-                ))}
-            </Grid>
+        <Box sx={{width: '100%', maxWidth: {sm: '100%', md: '1700px'}}}>
+            <Grid container spacing={4} columns={12}
+                  direction="row"
+                  sx={{
+                      justifyContent: "center",
+                      alignItems: "flex-start",
+                  }}>
+                <Grid
+                    size={{xs: 12, sm: 12, lg: 12}}
+                    container
+                    spacing={2}
+                    columns={12}
+                    sx={{mb: (theme) => theme.spacing(1)}}
+                >
+                    {data.map((card, index) => (
+                        <Grid key={index} size={{xs: 12, sm: 6, lg: 4}}>
+                            <StatCard {...card} />
+                        </Grid>
+                    ))}
+                </Grid>
 
-            <CustomizedDataGrid />
-        </Grid>
+                <Grid
+                    size={{xs: 12, sm: 12, lg: 12}}
+                    container
+                    spacing={2}
+                    columns={12}
+                    sx={{mb: (theme) => theme.spacing(1)}}
+                >
+                    <CustomizedDataGrid/>
+                </Grid>
+            </Grid>
+        </Box>
     );
 }
