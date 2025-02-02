@@ -7,9 +7,9 @@ import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import MenuContent from './MenuContent';
-import OptionsMenu from './OptionsMenu';
 import * as PropTypes from "prop-types";
 import Logo12G from "../../common/Logo12G";
+import OptionsMenu from "./OptionsMenu";
 
 const drawerWidth = 240;
 

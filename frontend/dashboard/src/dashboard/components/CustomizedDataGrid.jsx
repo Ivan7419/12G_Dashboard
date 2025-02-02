@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {DataGrid, useGridApiRef} from '@mui/x-data-grid';
-import { columns, initialRows } from '../internals/data/gridData';
+import { columns, initialRows } from '../internals/data/gridDataSales';
 import EditToolbar from "./EditToolbar";
 import { ruRU } from '@mui/x-data-grid/locales';
 
-export default function CustomizedDataGrid(props) {
+export default function CustomizedDataGrid() {
   const [rows, setRows] = React.useState(initialRows);
   const [selectedRowId, setSelectedRowId] = React.useState(null);
   const apiRef = useGridApiRef();
@@ -31,6 +31,10 @@ export default function CustomizedDataGrid(props) {
         toolbar: EditToolbar,
       }}
       slotProps={{
+        loadingOverlay: {
+          variant: 'linear-progress',
+          noRowsVariant: 'linear-progress',
+        },
         toolbar: {
           setRows,
           apiRef: apiRef,

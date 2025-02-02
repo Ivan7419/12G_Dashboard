@@ -9,7 +9,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import SellRoundedIcon from '@mui/icons-material/SellRounded';
 import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
-
+import {Link} from "react-router-dom";
 
 
 export default function SaleCard() {
@@ -17,38 +17,42 @@ export default function SaleCard() {
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <Card variant="outlined" sx={{ height: '100%', width: '90%' }}>
+        <Card variant="outlined" sx={{height: '100%', width: '90%'}}>
             <CardContent>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <TrendingUpIcon sx={{ fontSize: 35, marginRight: '4px' }} />
-                    <Typography variant="h6" gutterBottom sx={{ color: 'text.secondary' }}>
+                <Box sx={{display: 'flex', alignItems: 'center'}}>
+                    <TrendingUpIcon sx={{fontSize: 35, marginRight: '4px'}}/>
+                    <Typography variant="h6" gutterBottom sx={{color: 'text.secondary'}}>
                         Продажи
                     </Typography>
                 </Box>
                 <Box>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-                        <Button
-                            width='100%'
-                            variant="contained"
-                            size="medium"
-                            color="primary"
-                            endIcon={<AddBoxRoundedIcon />}
-                            fullWidth={isSmallScreen}
-                            sx={{ width: '90%', mb: 2}}>
-                            Добавить
-                        </Button>
+                    <Box sx={{display: 'flex', justifyContent: 'center', width: '100%'}}>
+                            <Button
+                                component={Link}
+                                to={"/dashboard/sales"}
+                                width='100%'
+                                variant="contained"
+                                size="medium"
+                                color="primary"
+                                endIcon={<AddBoxRoundedIcon/>}
+                                fullWidth={isSmallScreen}
+                                sx={{width: '90%', mb: 2}}>
+                                Добавить
+                            </Button>
                     </Box>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-                        <Button
-                            width='100%'
-                            variant="contained"
-                            size="medium"
-                            color="primary"
-                            endIcon={<SellRoundedIcon />}
-                            fullWidth={isSmallScreen}
-                            sx={{ width: '90%' }}>
-                            Списать
-                        </Button>
+                    <Box sx={{display: 'flex', justifyContent: 'center', width: '100%'}}>
+                            <Button
+                                component={Link}
+                                to={"/dashboard/stock"}
+                                width='100%'
+                                variant="contained"
+                                size="medium"
+                                color="primary"
+                                endIcon={<SellRoundedIcon/>}
+                                fullWidth={isSmallScreen}
+                                sx={{width: '90%'}}>
+                                Списать
+                            </Button>
                     </Box>
                 </Box>
             </CardContent>

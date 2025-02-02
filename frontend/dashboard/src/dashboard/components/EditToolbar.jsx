@@ -5,6 +5,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import * as React from "react";
 import SalesModal from "../helpers/modals/SalesModal";
+import StockModal from "../helpers/modals/StockModal";
 
 
 export default function EditToolbar(props) {
@@ -64,7 +65,7 @@ export default function EditToolbar(props) {
                     Удалить
                 </Button>
             </GridToolbarContainer>
-            <SalesModal
+            <StockModal
                 open={open}
                 setOpen={setOpen}
                 handleClose={handleClose}

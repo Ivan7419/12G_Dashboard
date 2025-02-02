@@ -1,10 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Checkbox from '@mui/material/Checkbox';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import Link from '@mui/material/Link';
@@ -14,9 +11,10 @@ import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import AppTheme from '../shared-theme/AppTheme';
-import { GoogleIcon, FacebookIcon, SitemarkIcon } from './CustomIcons';
 import ColorModeSelect from '../shared-theme/ColorModeSelect';
 import Logo12G from "../common/Logo12G";
+import {useAuth} from "../Authentication/AuthContext";
+import VerificationCheck from "../sign-in/VerificationCheck";
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -69,6 +67,32 @@ export default function SignUp(props) {
   const [nameErrorMessage, setNameErrorMessage] = React.useState('');
   const [userCodeError, setUserCodeError] = React.useState(false);
   const [userCodeErrorMessage, setUserCodeErrorMessage] = React.useState('');
+  const formRef = React.useRef(null);
+  const [verOpen, setVerOpen] = React.useState(false);
+
+  const auth = useAuth();
+
+  const handleVerClose = () => {
+    setVerOpen(false);
+  };
+
+  const getUserDetails = () => {
+    const form = formRef.current;
+    const data = new FormData(form);
+    return {
+      email: data.get('email'),
+      password: data.get('password'),
+      name: data.get('name'),
+      userCode: data.get('userCode'),
+      deviceId: navigator.userAgent + navigator.platform,
+    };
+  };
+
+  const handleVerificationCode = async (code) => {
+    console.log("Received verification code:", code);
+    const userDetails = getUserDetails();
+    await auth.verify2FA(code, userDetails.email, userDetails.deviceId);
+  };
 
   const validateInputs = () => {
     const email = document.getElementById('email');
@@ -80,7 +104,7 @@ export default function SignUp(props) {
 
     if (!email.value || !/\S+@\S+\.\S+/.test(email.value)) {
       setEmailError(true);
-      setEmailErrorMessage('Please enter a valid email address.');
+      setEmailErrorMessage('Пожалуйста, введите корректный адрес электронной почты.');
       isValid = false;
     } else {
       setEmailError(false);
@@ -89,7 +113,7 @@ export default function SignUp(props) {
 
     if (!password.value || password.value.length < 6) {
       setPasswordError(true);
-      setPasswordErrorMessage('Password must be at least 6 characters long.');
+      setPasswordErrorMessage('Пароль должен содержать не менее 6 символов.');
       isValid = false;
     } else {
       setPasswordError(false);
@@ -107,7 +131,7 @@ export default function SignUp(props) {
 
     if (!userCode.value || userCode.value.length < 1) {
       setUserCodeError(true);
-      setUserCodeErrorMessage('Ващ код не найден.');
+      setUserCodeErrorMessage('Код обязателен для заполнения');
       isValid = false;
     } else {
       setUserCodeError(false);
@@ -117,19 +141,21 @@ export default function SignUp(props) {
     return isValid;
   };
 
-  const handleSubmit = (event) => {
-    if (nameError || emailError || passwordError || userCodeError) {
-      event.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const isValid = validateInputs();
+    if (!isValid) return;
+
+    const userDetails = getUserDetails();
+    const result = await auth.signupAction(userDetails);
+
+    if (!result) {
+      setUserCodeError('Ошибка регистрации');
       return;
     }
-    const data = new FormData(event.currentTarget);
-    console.log({
-      name: data.get('name'),
-      lastName: data.get('lastName'),
-      email: data.get('email'),
-      password: data.get('password'),
-      code: data.get('userCode'),
-    });
+
+    setVerOpen(true);
+    await auth.handle2FA(userDetails.email);
   };
 
   return (
@@ -233,6 +259,10 @@ export default function SignUp(props) {
                 </Link>
               </span>
             </Typography>
+            <VerificationCheck
+                handleClose={handleVerClose}
+                open={verOpen}
+                onVerify={handleVerificationCode}/>
           </Box>
         </Card>
       </SignUpContainer>

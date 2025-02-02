@@ -2,6 +2,7 @@ import * as React from 'react';
 import CustomizedDataGrid from "./CustomizedDataGrid";
 import Grid from "@mui/material/Grid2";
 import StatCard from "./StatCard";
+import Box from "@mui/material/Box";
 
 const data = [
     {
@@ -39,6 +40,7 @@ const data = [
 export default function Sales() {
 
     return (
+        <Box sx={{width: '100%', maxWidth: {sm: '100%', md: '1700px'}}}>
         <Grid container spacing={4} columns={12}
               direction="row"
               sx={{
@@ -61,5 +63,6 @@ export default function Sales() {
 
             <CustomizedDataGrid />
         </Grid>
+        </Box>
     );
 }

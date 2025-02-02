@@ -51,7 +51,7 @@ const items = [
     {label: "T-shirt"},
 ];
 
-export default function SalesModal({ open, handleClose, onAddRow, selectedRow }) {
+export default function SalesModal({ open, handleClose, onAddRow }) {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
