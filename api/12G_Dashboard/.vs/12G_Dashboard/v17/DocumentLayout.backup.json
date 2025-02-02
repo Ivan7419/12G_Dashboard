@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\12G\\api\\12G_Dashboard\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\services\\redisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\services\\redisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\models\\auth\\registrationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\models\\auth\\registrationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 344,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RedisService.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\RedisService.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Services\\RedisService.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\RedisService.cs",
+              "RelativeToolTip": "12G_Dashboard\\Services\\RedisService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T18:07:26.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegistrationModel.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Auth\\RegistrationModel.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Models\\Auth\\RegistrationModel.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Auth\\RegistrationModel.cs",
+              "RelativeToolTip": "12G_Dashboard\\Models\\Auth\\RegistrationModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T17:22:04.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\UserController.cs",
+              "RelativeToolTip": "12G_Dashboard\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T20:02:15.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Services\\ProductService.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\ProductService.cs",
+              "RelativeToolTip": "12G_Dashboard\\Services\\ProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T20:39:24.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Program.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Program.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Program.cs",
+              "RelativeToolTip": "12G_Dashboard\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T01:40:31.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "12G_Dashboard\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAkwDsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T19:38:28.077Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

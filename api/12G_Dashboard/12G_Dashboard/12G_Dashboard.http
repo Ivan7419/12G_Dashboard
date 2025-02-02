@@ -1,0 +1,6 @@
+@_12G_Dashboard_HostAddress = http://localhost:5004
+
+GET {{_12G_Dashboard_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
