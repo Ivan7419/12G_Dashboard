@@ -27,6 +27,11 @@
         "Name": "user",
         "Type": "_12G_Dashboard.Models.Db.User",
         "IsRequired": true
+      },
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -177,6 +182,32 @@
     "ReturnTypes": [
       {
         "Type": "_12G_Dashboard.Models.Db.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "_12G_Dashboard.Controllers.UserController",
+    "Method": "CreateCode",
+    "RelativePath": "api/User/create-code",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "_12G_Dashboard.Models.Db.RegisterCode",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -20,22 +20,26 @@ namespace _12G_Dashboard.Controllers
     {
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
+        private readonly RedisService _redisService;
         private readonly IVerificationRequestService _verificationService;
         private readonly IConfiguration _configuration;
 
         public AuthController(IConfiguration configuration,
             IVerificationRequestService verificationService,
             IAuthService authService,
-            IUserService userService)
+            IUserService userService,
+            RedisService redisService
+            )
         {
             _configuration = configuration;
             _verificationService = verificationService;
             _authService = authService;
             _userService = userService;
+            _redisService = redisService;
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] User user)
+        public async Task<IActionResult> Register([FromBody] User user, [FromQuery] string code)
         {
             if (user == null || string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(user.Name))
             {
@@ -45,9 +49,14 @@ namespace _12G_Dashboard.Controllers
             var existingUser = await _userService.GetUserByEmailAsync(user.Email);
             if (existingUser != null) return Conflict("This user already exists");
 
+            if (!await _authService.CheckRegisterCode(code))
+            {
+                return BadRequest("Unique code wasn't found");
+            }
+
             await _verificationService.AddVerificationRequest(user.Email);
 
-            await _userService.CreateUserAsync(user);
+            await _redisService.SetDataAsync($"user:{user.Email}", user);     
 
             return Ok(new { Message = "Verification code sent successfully." });
         }
@@ -91,21 +100,41 @@ namespace _12G_Dashboard.Controllers
                 return BadRequest("Request body is null");
             }
             var user = await _userService.GetUserByEmailAsync(request.Email);
+            
             if (user == null)
             {
-                return BadRequest("User not found");
+                var redisUser = await _redisService.GetDataAsync<User>($"user:{request.Email}");
+                if(redisUser == null)
+                {
+                    return BadRequest("User not found");
+                }
+                else
+                {
+                    if (!await _verificationService.Check($"verification:{request.Email}", request.VerificationCode))
+                    {
+                        return BadRequest(new { Message = "Invalid or expired code" });
+                    }
+                    redisUser.Devices.Add(deviceId);
+                    await _userService.CreateUserAsync(new Models.Db.User
+                    {
+                        Name = redisUser.Name,
+                        Email = redisUser.Email,
+                        Password = redisUser.Password,
+                        Devices = redisUser.Devices
+                    });
+                    var token = _authService.GenerateJwtToken(redisUser);
+                    return Ok(new { Message = "2FA verification successful", Token = token });
+                }
             }
 
-            if (!await _verificationService.Check(request.Email, request.VerificationCode))
+            if (!await _verificationService.Check($"verification:{request.Email}", request.VerificationCode))
             {
                 return BadRequest(new { Message = "Invalid or expired code" });
             }
 
-            user.HasPassed2FA = true;
             if(!user.Devices.Contains(deviceId)) user.Devices.Add(deviceId);
             await _userService.UpdateUserAsync(user);
 
-            await _verificationService.RemoveVerificationRequest(request.Email);
             var jwtToken = _authService.GenerateJwtToken(user);
 
             return Ok(new { Message = "2FA verification successful", Token = jwtToken });

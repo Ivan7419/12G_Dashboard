@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("12G_Dashboard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dee1b173fd5985aa090827ee64f8f7fa7c2bddc6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0528e6cfe97054aec21195fa842167c57c7663d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("12G_Dashboard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("12G_Dashboard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

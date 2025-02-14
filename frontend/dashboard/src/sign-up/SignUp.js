@@ -78,20 +78,23 @@ export default function SignUp(props) {
 
   const getUserDetails = () => {
     const form = formRef.current;
+    console.log(form);
     const data = new FormData(form);
     return {
-      email: data.get('email'),
-      password: data.get('password'),
-      name: data.get('name'),
+      user: {
+        email: data.get('email'),
+        password: data.get('password'),
+        name: data.get('name'),
+        deviceId: navigator.userAgent + navigator.platform,
+      },
       userCode: data.get('userCode'),
-      deviceId: navigator.userAgent + navigator.platform,
     };
   };
 
   const handleVerificationCode = async (code) => {
     console.log("Received verification code:", code);
     const userDetails = getUserDetails();
-    await auth.verify2FA(code, userDetails.email, userDetails.deviceId);
+    await auth.verify2FA(code, userDetails.user.email, userDetails.user.deviceId);
   };
 
   const validateInputs = () => {
@@ -145,9 +148,8 @@ export default function SignUp(props) {
     event.preventDefault();
     const isValid = validateInputs();
     if (!isValid) return;
-
     const userDetails = getUserDetails();
-    const result = await auth.signupAction(userDetails);
+    const result = await auth.signupAction(userDetails.user, userDetails.userCode);
 
     if (!result) {
       setUserCodeError('Ошибка регистрации');
@@ -155,7 +157,6 @@ export default function SignUp(props) {
     }
 
     setVerOpen(true);
-    await auth.handle2FA(userDetails.email);
   };
 
   return (
@@ -176,7 +177,7 @@ export default function SignUp(props) {
           </Typography>
           <Box
             component="form"
-            onSubmit={handleSubmit}
+            ref={formRef}
             sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
           >
             <FormControl>
@@ -188,7 +189,7 @@ export default function SignUp(props) {
                 fullWidth
                 id="name"
                 placeholder="Фёдор Задурски"
-                error={nameError}
+                error={!!nameError}
                 helperText={nameErrorMessage}
                 color={nameError ? 'error' : 'primary'}
               />
@@ -203,7 +204,7 @@ export default function SignUp(props) {
                 name="email"
                 autoComplete="email"
                 variant="outlined"
-                error={emailError}
+                error={!!emailError}
                 helperText={emailErrorMessage}
                 color={passwordError ? 'error' : 'primary'}
               />
@@ -219,7 +220,7 @@ export default function SignUp(props) {
                 id="password"
                 autoComplete="new-password"
                 variant="outlined"
-                error={passwordError}
+                error={!!passwordError}
                 helperText={passwordErrorMessage}
                 color={passwordError ? 'error' : 'primary'}
               />
@@ -234,7 +235,7 @@ export default function SignUp(props) {
                   type="password"
                   id="userCode"
                   variant="outlined"
-                  error={userCodeError}
+                  error={!!userCodeError}
                   helperText={userCodeErrorMessage}
                   color={userCodeError ? 'error' : 'primary'}
               />
@@ -243,7 +244,12 @@ export default function SignUp(props) {
               type="submit"
               fullWidth
               variant="contained"
-              onClick={validateInputs}
+              onClick={async (event) => {
+                if (validateInputs()) {
+                  await handleSubmit(event);
+                }
+              }
+              }
             >
               Зарегистрироваться
             </Button>

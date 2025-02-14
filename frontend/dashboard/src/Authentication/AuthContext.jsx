@@ -51,9 +51,9 @@ const AuthProvider = ({children}) => {
         }
     };
 
-    const signupAction = async (data) => {
+    const signupAction = async (data, code) => {
         try {
-            const response = await fetch("http://localhost:5004/api/auth/register", {
+            const response = await fetch(`http://localhost:5004/api/auth/register?code=${code}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -65,24 +65,10 @@ const AuthProvider = ({children}) => {
             }
             const res = await response.json();
             if (res) {
-                if(res.token) {
-                    setToken(res.token);
-                    localStorage.setItem("site", res.token);
-                    setIsAuthenticated(true);
-                    navigate("/dashboard");
-                }
-                if (res.requires2FA) {
-                    return { requires2FA: true, deviceId: data.deviceId };
-                }
-                console.log("Login successful without 2FA");
-                return { requires2FA: false };
+                return true;
             }
         } catch (err) {
             console.error("Error:", err.message);
-            setToken("");
-            localStorage.removeItem("site");
-            setIsAuthenticated(false);
-            console.log("->"+isAuthenticated);
             return;
         }
     };

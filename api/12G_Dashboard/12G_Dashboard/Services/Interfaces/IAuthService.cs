@@ -7,5 +7,6 @@ namespace _12G_Dashboard.Services.Interfaces
     {
         Task<User?> AuthenticateAsync(string email, string password);
         string GenerateJwtToken(User user);
+        Task<bool> CheckRegisterCode(string code);
     }
 }

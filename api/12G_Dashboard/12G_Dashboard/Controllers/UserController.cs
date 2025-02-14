@@ -1,4 +1,5 @@
 ﻿using _12G_Dashboard.Models.Db;
+using _12G_Dashboard.Services.Interfaces;
 using Google.Authenticator;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -17,10 +18,12 @@ namespace _12G_Dashboard.Controllers
     public class UserController : ControllerBase
     {
         private readonly IMongoCollection<User> _users;
+        private readonly IUserService _userService;
 
-        public UserController(IMongoDatabase database)
+        public UserController(IMongoDatabase database, IUserService userService)
         {
             _users = database.GetCollection<User>("Users");
+            _userService = userService;
         }
 
         [HttpGet]
@@ -35,6 +38,17 @@ namespace _12G_Dashboard.Controllers
         {
             await _users.InsertOneAsync(user);
             return CreatedAtRoute(new { id = user.Id }, user);
+        }
+
+        [HttpPost("create-code")]
+        public async Task<ActionResult<RegisterCode>> CreateCode(string code)
+        {
+            RegisterCode registerCode = new RegisterCode
+            {
+                Code = code
+            };
+            await _userService.CreateRegisterCodeAsync(registerCode);
+            return Ok();
         }
     }
 }

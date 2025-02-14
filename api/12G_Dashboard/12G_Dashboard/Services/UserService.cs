@@ -8,10 +8,17 @@ namespace _12G_Dashboard.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IRegisterCodeRepository _registerCodeRepository;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, IRegisterCodeRepository registerCodeRepository)
         {
             _userRepository = userRepository;
+            _registerCodeRepository = registerCodeRepository;
+        }
+
+        public async Task CreateRegisterCodeAsync(RegisterCode code)
+        {
+            await _registerCodeRepository.CreateAsync(code);
         }
 
         public async Task CreateUserAsync(User user) => await _userRepository.CreateAsync(user);

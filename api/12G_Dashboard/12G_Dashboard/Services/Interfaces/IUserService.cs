@@ -11,5 +11,6 @@ namespace _12G_Dashboard.Services.Interfaces
         Task CreateUserAsync(User user);
         Task UpdateUserAsync(User user);
         Task DeleteUserAsync(ObjectId id);
+        Task CreateRegisterCodeAsync(RegisterCode code);
     }
 }

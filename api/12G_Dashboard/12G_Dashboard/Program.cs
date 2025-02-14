@@ -16,11 +16,15 @@ using _12G_Dashboard.Repositories.Interfaces;
 using _12G_Dashboard.Repositories;
 using _12G_Dashboard.Services.Interfaces;
 using StackExchange.Redis;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var redis = ConnectionMultiplexer.Connect("localhost:6379");
-builder.Services.AddSingleton<IConnectionMultiplexer>(redis);
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "localhost";
+    options.InstanceName = "12G";
+});
 
 builder.Services.AddSingleton<IMongoClient>(serviceProvider =>
 {
@@ -74,10 +78,12 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IVerificationRequestRepository, VerificationRequestRepository>();
+builder.Services.AddScoped<IRegisterCodeRepository, RegisterCodeRepository>();
 
 //Services
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<EmailService>();
+builder.Services.AddScoped<RedisService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IVerificationRequestService, VerificationRequestService>();

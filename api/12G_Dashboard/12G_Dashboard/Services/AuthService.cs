@@ -12,11 +12,13 @@ namespace _12G_Dashboard.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
+        private readonly IRegisterCodeRepository _registerCodeRepository;
 
-        public AuthService(IUserRepository userRepository, IConfiguration configuration)
+        public AuthService(IUserRepository userRepository, IConfiguration configuration, IRegisterCodeRepository registerCodeRepository)
         {
             _userRepository = userRepository;
             _configuration = configuration;
+            _registerCodeRepository = registerCodeRepository;
         }
 
         public async Task<User?> AuthenticateAsync(string email, string password)
@@ -29,6 +31,13 @@ namespace _12G_Dashboard.Services
             return user;
         }
 
+        public async Task<bool> CheckRegisterCode(string code)
+        {
+            var regCode = await _registerCodeRepository.GetByCode(code);
+            if(regCode == null) return false;
+            await _registerCodeRepository.DeleteAsync(regCode.Id); 
+            return true;
+        }
 
         public string GenerateJwtToken(User user)
         {
