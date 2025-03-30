@@ -4,6 +4,6 @@
     {
         public required string Color { get; set; }
 
-        public IEnumerable<Size> Sizes { get; set; } = [];
+        public Dictionary<string, int> Sizes { get; set; } = [];
     }
 }

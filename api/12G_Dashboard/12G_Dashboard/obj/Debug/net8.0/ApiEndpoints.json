@@ -117,6 +117,22 @@
   },
   {
     "ContainingType": "ProductsController",
+    "Method": "CreateBrand",
+    "RelativePath": "api/Products/create-brand",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brand",
+        "Type": "_12G_Dashboard.Models.Db.Stock.Brand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductsController",
     "Method": "GetAll",
     "RelativePath": "api/Products/get-all",
     "HttpMethod": "GET",
@@ -137,12 +153,38 @@
   },
   {
     "ContainingType": "ProductsController",
+    "Method": "GetAllBrands",
+    "RelativePath": "api/Products/get-all-brands",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductsController",
     "Method": "Seed",
     "RelativePath": "api/Products/seed",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductsController",
+    "Method": "Update",
+    "RelativePath": "api/Products/update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prodcut",
+        "Type": "Product",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

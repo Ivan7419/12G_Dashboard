@@ -3,44 +3,36 @@
   "WorkspaceRootPath": "E:\\12G\\api\\12G_Dashboard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\repositories\\registercoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\repositories\\registercoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\models\\db\\stock\\colorvariation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\models\\db\\stock\\colorvariation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\models\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\models\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\models\\db\\stock\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\models\\db\\stock\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\models\\db\\stock\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\models\\db\\stock\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\services\\verificationrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\services\\verificationrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\models\\auth\\registrationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\models\\auth\\registrationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|e:\\12g\\api\\12g_dashboard\\12g_dashboard\\models\\db\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F62089F0-87E2-4C02-A569-886CF2CBABDB}|12G_Dashboard\\12G_Dashboard.csproj|solutionrelative:12g_dashboard\\models\\db\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,134 +42,106 @@
       "DocumentGroups": [
         {
           "DockedWidth": 344,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterCodeRepository.cs",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Repositories\\RegisterCodeRepository.cs",
-              "RelativeDocumentMoniker": "12G_Dashboard\\Repositories\\RegisterCodeRepository.cs",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Repositories\\RegisterCodeRepository.cs",
-              "RelativeToolTip": "12G_Dashboard\\Repositories\\RegisterCodeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T01:48:16.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "12G_Dashboard\\Services\\UserService.cs",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\UserService.cs",
-              "RelativeToolTip": "12G_Dashboard\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T01:35:45.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "12G_Dashboard\\Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "12G_Dashboard\\Services\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T23:08:04.861Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "12G_Dashboard\\Services\\AuthService.cs",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\AuthService.cs",
-              "RelativeToolTip": "12G_Dashboard\\Services\\AuthService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wCEAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T22:34:55.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "VerificationRequestService.cs",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\VerificationRequestService.cs",
-              "RelativeDocumentMoniker": "12G_Dashboard\\Services\\VerificationRequestService.cs",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\VerificationRequestService.cs",
-              "RelativeToolTip": "12G_Dashboard\\Services\\VerificationRequestService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T02:17:01.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\appsettings.json",
-              "RelativeDocumentMoniker": "12G_Dashboard\\appsettings.json",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\appsettings.json",
-              "RelativeToolTip": "12G_Dashboard\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-06T19:52:01.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RegistrationModel.cs",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Auth\\RegistrationModel.cs",
-              "RelativeDocumentMoniker": "12G_Dashboard\\Models\\Auth\\RegistrationModel.cs",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Auth\\RegistrationModel.cs",
-              "RelativeToolTip": "12G_Dashboard\\Models\\Auth\\RegistrationModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T17:22:04.201Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "12G_Dashboard\\Controllers\\UserController.cs",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\UserController.cs",
-              "RelativeToolTip": "12G_Dashboard\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAqwCoAAAAeAAAAAAAAAA==",
+              "Title": "ColorVariation.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Db\\Stock\\ColorVariation.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Models\\Db\\Stock\\ColorVariation.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Db\\Stock\\ColorVariation.cs",
+              "RelativeToolTip": "12G_Dashboard\\Models\\Db\\Stock\\ColorVariation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:02:15.91Z",
+              "WhenOpened": "2025-03-30T14:50:28.533Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Program.cs",
-              "RelativeDocumentMoniker": "12G_Dashboard\\Program.cs",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Program.cs",
-              "RelativeToolTip": "12G_Dashboard\\Program.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAIwFMAAAA+AAAAAAAAAA==",
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\DTOs\\ProductDto.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Models\\DTOs\\ProductDto.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\DTOs\\ProductDto.cs",
+              "RelativeToolTip": "12G_Dashboard\\Models\\DTOs\\ProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T01:40:31.376Z",
+              "WhenOpened": "2025-03-24T23:07:20.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Db\\User.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Models\\Db\\User.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Db\\User.cs",
+              "RelativeToolTip": "12G_Dashboard\\Models\\Db\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T23:02:07.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Db\\Stock\\Product.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Models\\Db\\Stock\\Product.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Db\\Stock\\Product.cs",
+              "RelativeToolTip": "12G_Dashboard\\Models\\Db\\Stock\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T22:53:27.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Brand.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Db\\Stock\\Brand.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Models\\Db\\Stock\\Brand.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Models\\Db\\Stock\\Brand.cs",
+              "RelativeToolTip": "12G_Dashboard\\Models\\Db\\Stock\\Brand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T22:53:26.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Services\\ProductService.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Services\\ProductService.cs*",
+              "RelativeToolTip": "12G_Dashboard\\Services\\ProductService.cs*",
+              "ViewState": "AgIAADMAAAAAAAAAAAAcwEgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T22:46:02.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Repositories\\ProductRepository.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "12G_Dashboard\\Repositories\\ProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T22:41:36.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "12G_Dashboard\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "12G_Dashboard\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwDYAAAANAAAAAAAAAA==",
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "12G_Dashboard\\Controllers\\ProductsController.cs",
+              "ToolTip": "E:\\12G\\api\\12G_Dashboard\\12G_Dashboard\\Controllers\\ProductsController.cs*",
+              "RelativeToolTip": "12G_Dashboard\\Controllers\\ProductsController.cs*",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAIwGsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T19:38:28.077Z",
+              "WhenOpened": "2025-03-18T21:13:27.423Z",
               "EditorCaption": ""
             }
           ]

@@ -17,7 +17,7 @@ import AppTheme from '../shared-theme/AppTheme';
 import Logo12G from '../common/Logo12G';
 import ColorModeSelect from "../shared-theme/ColorModeSelect";
 
-import {useAuth} from "../Authentication/AuthContext";
+import {useAuth} from "../authentication/AuthContext";
 import VerificationCheck from "./VerificationCheck";
 
 

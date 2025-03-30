@@ -1,8 +1,8 @@
 import * as React from 'react';
-import CustomizedDataGrid from "./CustomizedDataGrid";
 import Grid from "@mui/material/Grid2";
 import StatCard from "./StatCard";
 import Box from "@mui/material/Box";
+import StockDataGrid from "./datagrids/StockDataGrid";
 
 const data = [
     {
@@ -68,7 +68,7 @@ export default function Stock() {
                     columns={12}
                     sx={{mb: (theme) => theme.spacing(1)}}
                 >
-                    <CustomizedDataGrid/>
+                    <StockDataGrid/>
                 </Grid>
             </Grid>
         </Box>

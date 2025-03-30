@@ -5,6 +5,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using static Org.BouncyCastle.Asn1.Cmp.Challenge;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -37,20 +38,34 @@ public class ProductsController : ControllerBase
     {
         var faker = new Bogus.Faker();
 
+        var brands = Enumerable.Range(1, 5).Select(_ => new Brand
+        {
+            Id = ObjectId.GenerateNewId(),
+            Name = faker.Company.CompanyName()
+        }).ToList();
+
+        // Insert brands into the database
+        foreach (var brand in brands)
+        {
+            await _productService.CreateBrandAsync(brand);
+        }
+
         // Create random products
         var products = Enumerable.Range(1, 10).Select(_ => new Product
         {
             Name = faker.Commerce.ProductName(),
-            Brand = new _12G_Dashboard.Models.Db.Stock.Brand { Name = faker.Company.CompanyName() },
+            BrandId = faker.PickRandom(brands).Id,
             Article = faker.Random.String2(10, "abcdefghijklmnopqrstuvwxyz0123456789"),
             ColorVariations = Enumerable.Range(1, faker.Random.Int(1, 5)).Select(_ => new ColorVariation
             {
                 Color = faker.Commerce.Color(),
-                Sizes = Enumerable.Range(1, faker.Random.Int(1, 5)).Select(_ => new Size
-                {
-                    Quantity = faker.Random.Int(1, 100),
-                    SizeName = faker.PickRandom(new[] { "XS", "S", "M", "L", "XL", "XXL" })
-                }).ToList()
+                Sizes = Enumerable.Range(1, faker.Random.Int(1, 5))
+        .Select(__ => faker.PickRandom(new[] { "XS", "S", "M", "L", "XL", "XXL" }))
+        .Distinct() // Prevent duplicate keys in dictionary
+        .ToDictionary(
+            size => size,
+            size => faker.Random.Int(1, 100)
+        )
             }).ToList(),
             Price = decimal.Parse(faker.Commerce.Price(min: 10, max: 500))
         }).ToList();
@@ -76,5 +91,27 @@ public class ProductsController : ControllerBase
     {
         await _productService.CreateProductAsync(product);
         return CreatedAtAction(nameof(Get), new { id = product.Id }, product);
+    }
+
+    [HttpPost("create-brand")]
+    public async Task<ActionResult> CreateBrand([FromBody] Brand brand)
+    {
+        await _productService.CreateBrandAsync(brand);
+        return CreatedAtAction(nameof(Get), new { id = brand.Id }, brand);
+    }
+
+    [HttpGet("get-all-brands")]
+    public async Task<ActionResult> GetAllBrands()
+    {
+        var brands = await _productService.GetAllBrandsAsync();
+        return Ok(brands);
+    }
+
+
+    [HttpPost("update")]
+    public async Task<ActionResult> Update([FromBody] Product prodcut)
+    {
+        await _productService.UpdateProductAsync(prodcut);
+        return Ok(new { Message = "Product updated successfully" });
     }
 }

@@ -1,4 +1,6 @@
-﻿using _12G_Dashboard.Repositories.Interfaces;
+﻿using _12G_Dashboard.Models.Db.Stock;
+using _12G_Dashboard.Models.DTOs;
+using _12G_Dashboard.Repositories.Interfaces;
 using _12G_Dashboard.Services.Interfaces;
 using MongoDB.Bson;
 using System.Collections;
@@ -14,6 +16,12 @@ namespace _12G_Dashboard.Services
             _productRepository = productRepository;
         }
 
+        public async Task CreateBrandAsync(Brand brand)
+        {
+            if (brand == null) return;
+            await _productRepository.CreateBrandAsync(brand);
+        }
+
         public async Task CreateProductAsync(Product product)
         {
             if (product == null) return;
@@ -25,9 +33,23 @@ namespace _12G_Dashboard.Services
             await _productRepository.DeleteAsync(id);
         }
 
-        public async Task<IEnumerable<Product>> GetAllProductsAsync()
+        public async Task<IEnumerable<ProductDto>> GetAllProductsAsync()
         {
-            return await _productRepository.GetAllAsync();
+            var products = await _productRepository.GetAllAsync();
+            var brandIds = products.Select(p => p.BrandId).Distinct().ToList();
+            var brands = await _productRepository.GetBrandsByIdsAsync([.. brandIds]); 
+            var brandDict = brands.ToDictionary(b => b.Id, b => b.Name);
+
+            var result = products.Select(p => new ProductDto
+            {
+                Id = p.Id.ToString(),
+                Name = p.Name,
+                Price = p.Price,
+                Brand = brandDict.TryGetValue(p.BrandId, out var brandName) ? brandName : "—",
+                Article = p.Article,
+                Colors = p.ColorVariations.ToList()
+            });
+            return result;
         }
 
         public async Task<Product?> GetProductByArticleAsync(string article)
@@ -45,6 +67,10 @@ namespace _12G_Dashboard.Services
         public async Task UpdateProductAsync(Product product)
         {
             await _productRepository.UpdateAsync(product);
+        }
+
+        public async Task<IEnumerable<Brand>> GetAllBrandsAsync() {
+            return await _productRepository.GetAllBrandsAsync();
         }
     }
 }

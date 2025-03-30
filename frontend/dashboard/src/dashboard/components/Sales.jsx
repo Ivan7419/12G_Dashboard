@@ -1,5 +1,5 @@
 import * as React from 'react';
-import CustomizedDataGrid from "./CustomizedDataGrid";
+import SalesDataGrid from "./datagrids/SalesDataGrid";
 import Grid from "@mui/material/Grid2";
 import StatCard from "./StatCard";
 import Box from "@mui/material/Box";
@@ -61,7 +61,7 @@ export default function Sales() {
                 ))}
             </Grid>
 
-            <CustomizedDataGrid />
+            <SalesDataGrid />
         </Grid>
         </Box>
     );

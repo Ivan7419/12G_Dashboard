@@ -13,7 +13,7 @@ import { styled } from '@mui/material/styles';
 import AppTheme from '../shared-theme/AppTheme';
 import ColorModeSelect from '../shared-theme/ColorModeSelect';
 import Logo12G from "../common/Logo12G";
-import {useAuth} from "../Authentication/AuthContext";
+import {useAuth} from "../authentication/AuthContext";
 import VerificationCheck from "../sign-in/VerificationCheck";
 
 const Card = styled(MuiCard)(({ theme }) => ({

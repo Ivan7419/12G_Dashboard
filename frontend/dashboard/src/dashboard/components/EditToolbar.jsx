@@ -12,7 +12,7 @@ export default function EditToolbar(props) {
     const [open, setOpen] = React.useState(false);
     const [modalMode, setModalMode] = React.useState("add");
     const [selectedRowData, setSelectedRowData] = React.useState(null);
-    const {selectedRowId, apiRef, setRows} = props;
+    const {selectedRowId, apiRef, setRows, modalType} = props;
 
     const handleOpen = (mode) => {
         setModalMode(mode);
@@ -65,18 +65,34 @@ export default function EditToolbar(props) {
                     Удалить
                 </Button>
             </GridToolbarContainer>
-            <StockModal
-                open={open}
-                setOpen={setOpen}
-                handleClose={handleClose}
-                onAddRow={(newRow) => setRows((prev) => [newRow, ...prev])}
-                onEditRow={(updatedRow) =>
-                    setRows((prev) =>
-                        prev.map((row) => (row.id === updatedRow.id ? updatedRow : row))
-                    )
-                }
-                selectedRow={modalMode === "edit" ? selectedRowData : null}
-            />
+
+            {modalType === "stock" ? (
+                <StockModal
+                    open={open}
+                    setOpen={setOpen}
+                    handleClose={handleClose}
+                    onAddRow={(newRow) => setRows((prev) => [newRow, ...prev])}
+                    onEditRow={(updatedRow) =>
+                        setRows((prev) =>
+                            prev.map((row) => (row.id === updatedRow.id ? updatedRow : row))
+                        )
+                    }
+                    selectedRow={modalMode === "edit" ? selectedRowData : null}
+                />
+            ) : (
+                <SalesModal
+                    open={open}
+                    setOpen={setOpen}
+                    handleClose={handleClose}
+                    onAddRow={(newRow) => setRows((prev) => [newRow, ...prev])}
+                    onEditRow={(updatedRow) =>
+                        setRows((prev) =>
+                            prev.map((row) => (row.id === updatedRow.id ? updatedRow : row))
+                        )
+                    }
+                    selectedRow={modalMode === "edit" ? selectedRowData : null}
+                />
+            )}
         </>
     );
 }
